@@ -1,0 +1,21 @@
+<h1>ES6: Use the Rest Parameter with Function Parameters</h1>
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-the-rest-parameter-with-function-parameters" target="_blank" rel="noopener noreferrer">Enlace</a>
+<p>Se usa para crear funciones mas flexibles, con el <mark>parametro rest</mark>
+se pueden crear funciones que reciban un numero variable de parametros. Estos argumentos
+son almacenados en un array que se accede desde dentro de la funcion.
+</p>
+
+<code>
+    <pre>
+        function howMany(...args) {
+            return "You have passed " + args.length + " arguments.";
+            }
+            console.log(howMany(0, 1, 2)); // You have passed 3 arguments.
+            console.log(howMany("string", null, [1, 2, 3], { })); // You have passed 4 arguments.
+    </pre>
+</code>
+
+<p><mark>...args</mark> elimina la necesidad de comprobar el array y nos permite usar
+    <code>filter, map, y reduce</code>
+</p>
+

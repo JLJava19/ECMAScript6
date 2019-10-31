@@ -1,0 +1,266 @@
+<h1>ES6: Use Destructuring Assignment to Extract Values from Objects</h1>
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-extract-values-from-objects" target="_blank" rel="noopener noreferrer">Enlace</a>
+
+<p>
+    La asignación de desestructuración es una sintaxis especial introducida en ES6, 
+    para asignar cuidadosamente los valores tomados directamente de un objeto.</p>
+
+<p>
+Considere el siguiente código ES5</p>
+
+<code>
+    <pre>
+        const user = { name: 'John Doe', age: 34 };
+
+        const name = user.name; // name = 'John Doe'
+        const age = user.age; // age = 34
+    </pre>
+</code>
+
+<p>
+    Aquí hay una declaración de asignación equivalente usando la sintaxis de 
+    desestructuración ES6:</p>
+
+<code>
+    <pre>
+        const { name, age } = user;
+        // name = 'John Doe', age = 34
+    </pre>
+</code>
+
+
+<p>
+    Aquí, las variables de nombre y edad se crearán y se asignarán los valores 
+    de sus valores respectivos del objeto de usuario. Puedes ver cuánto más 
+    limpio es esto.</p>
+
+<p>
+    Puede extraer tantos o pocos valores del objeto como desee.</p>
+
+
+<h1>ES6: Use Destructuring Assignment to Assign Variables from Objects</h1>
+
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-objects" target="_blank" rel="noopener noreferrer">Enlace</a>
+
+<p>
+    La desestructuración le permite asignar un nuevo nombre de variable al extraer 
+    valores. Puede hacer esto colocando el nuevo nombre después de dos puntos al 
+    asignar el valor.
+</p>
+
+<p>
+    Usando el mismo objeto del último ejemplo:</p>
+
+<code>
+    <pre>
+        const user = { name: 'John Doe', age: 34 };
+    </pre>
+</code>
+    
+<p>
+    Aquí le mostramos cómo puede dar nuevos nombres de variables en la asignación:</p>
+
+<code>
+    <pre>
+        const { name: userName, age: userAge } = user;
+        // userName = 'John Doe', userAge = 34
+    </pre>
+</code>
+
+<p>
+    Puede leerlo como "obtener el valor de user.name y asignarlo a una nueva 
+    variable llamada userName" y así sucesivamente.</p>
+
+<h1>ES6: Use Destructuring Assignment to Assign Variables from Nested Objects</h1>
+
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-nested-objects" target="_blank" rel="noopener noreferrer">Enlace</a>
+
+<p>
+    Puede usar los mismos principios de las dos lecciones anteriores para 
+    desestructurar los valores de los objetos anidados.</p>
+
+<p>
+    Usando un objeto similar a los ejemplos anteriores:</p>
+
+<code>
+    <pre>
+        const user = {
+                    johnDoe: { 
+                                age: 34,
+                                email: 'johnDoe@freeCodeCamp.com'
+                            }
+                    };
+    </pre>
+</code>
+
+<p>
+    Aquí se explica cómo extraer los valores de las propiedades de los objetos 
+    y asignarlos a variables con el mismo nombre:</p>
+
+<code>
+    <pre>
+        const { johnDoe: { age, email }} = user;
+    </pre>
+</code>
+    
+<p>
+    Y así es como puede asignar los valores de las propiedades de un objeto a 
+    variables con diferentes nombres:</p>
+
+<code>
+    <pre>
+        const { johnDoe: { age: userAge, email: userEmail }} = user;
+    </pre>
+</code>
+    
+
+<h1>ES6: Use Destructuring Assignment to Assign Variables from Arrays</h1>
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-arrays" target="_blank" rel="noopener noreferrer">Enlace</a>
+
+<p>
+    ES6 hace que las matrices de desestructuración sean tan fáciles como la 
+    desestructuración de objetos.</p>
+
+<p>
+    Una diferencia clave entre el operador extendido y la desestructuración de la 
+    matriz es que el operador extendido desempaqueta todo el contenido de una matriz 
+    en una lista separada por comas. En consecuencia, no puede elegir qué elementos 
+    desea asignar a las variables.
+</p>
+
+<p>
+    Destruir una matriz nos permite hacer exactamente eso:</p>
+
+<code>
+    <pre>
+        const [a, b] = [1, 2, 3, 4, 5, 6];
+        console.log(a, b); // 1, 2
+    </pre>
+</code>  
+
+<p>
+    A la variable <mark>a</mark> se le asigna el primer valor de la matriz, y a <mark>b</mark> se le asigna 
+    el segundo valor de la matriz. También podemos acceder al valor en cualquier 
+    índice de una matriz con desestructuración mediante el uso de comas para 
+    alcanzar el índice deseado:</p>
+
+<code>
+    <pre>
+        const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+        console.log(a, b, c); // 1, 2, 5
+    </pre>
+</code>    
+
+<code>
+    <pre>
+        let a = 8, b = 6;
+        // change code below this line
+        
+        [a, b] = [b, a];
+        
+        // change code above this line
+        console.log(a); // should be 6
+        console.log(b); // should be 8
+    </pre>
+</code> 
+
+
+<h1>ES6: Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements</h1>
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-with-the-rest-parameter-to-reassign-array-elements" target="_blank" rel="noopener noreferrer">Enlace</a>
+
+<p>
+    En algunas situaciones que implican la desestructuración de la matriz, es 
+    posible que deseemos recopilar el resto de los elementos en una matriz separada.</p>
+
+<p>The result is similar to Array.prototype.slice(), as shown below:</p>
+
+<code>
+    <pre>
+        const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+        console.log(a, b); // 1, 2
+        console.log(arr); // [3, 4, 5, 7]
+    </pre>
+</code>
+
+<p>Las variables <mark>a</mark> y <mark>b</mark> toman los valores primero y segundo de la matriz. Después de 
+    eso, debido a la presencia del parámetro rest, <mark>arr</mark> obtiene el resto de los 
+    valores en forma de matriz. El elemento rest solo funciona correctamente como 
+    la última variable de la lista. Como en, no puede usar el parámetro rest para 
+    capturar una submatriz que omita el último elemento de la matriz original.</p>
+
+<code>
+    <pre>
+        const source = [1,2,3,4,5,6,7,8,9,10];
+        function removeFirstTwo(list) {
+            "use strict";
+            // change code below this line
+            
+            const [a, b, ...arr] = list; 
+        
+            // change code above this line
+            return arr;
+        }
+        const arr = removeFirstTwo(source);
+        console.log(arr); // should be [3,4,5,6,7,8,9,10]
+        console.log(source); // should be [1,2,3,4,5,6,7,8,9,10];
+    </pre>
+</code>
+
+
+<h1>ES6: Use Destructuring Assignment to Pass an Object as a Function's Parameters</h1>
+
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-pass-an-object-as-a-functions-parameters" target="_blank" rel="noopener noreferrer">Enlace</a>
+
+<p>
+    En algunos casos, puede desestructurar el objeto en un argumento de función 
+    en sí.</p>
+
+<code>
+    <pre>
+        const profileUpdate = (profileData) => {
+            const { name, age, nationality, location } = profileData;
+            // do something with these variables
+            }
+    </pre>
+</code>    
+
+<p>
+    Esto efectivamente desestructura el objeto enviado a la función. Esto también se 
+    puede hacer en el lugar:
+</p>
+
+<code>
+    <pre>
+        const profileUpdate = ({ name, age, nationality, location }) => {
+            /* do something with these fields */
+            }
+    </pre>
+</code> 
+
+<p>
+    Esto elimina algunas líneas adicionales y hace que nuestro código se vea 
+    ordenado. Esto tiene el beneficio adicional de no tener que manipular un objeto 
+    completo en una función: solo los campos necesarios se copian dentro de la 
+    función.
+</p>
+
+<code>
+    <pre>
+        const stats = {
+            max: 56.78,
+            standard_deviation: 4.34,
+            median: 34.54,
+            mode: 23.87,
+            min: -0.75,
+            average: 35.85
+            };
+            
+            // change code below this line
+            const half = ({max, min}) => (max + min) / 2.0; // use function argument destructuring
+            // change code above this line
+            
+            console.log(stats); // should be object
+            console.log(half(stats)); // should be 28.015    
+    </pre>
+</code> 
+

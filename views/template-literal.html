@@ -1,0 +1,38 @@
+<h1>ES6: Create Strings using Template Literals</h1>
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/create-strings-using-template-literals" target="_blank" rel="noopener noreferrer">Enlace</a>
+
+<p>
+    Una nueva característica de ES6 es la plantilla literal. Este es un tipo 
+    especial de cadena que facilita la creación de cadenas complejas.</p>
+
+<p>Los literales de plantilla le permiten crear cadenas de varias líneas y utilizar 
+    funciones de interpolación de cadenas para crear cadenas.</p>
+
+
+<code>
+    <pre>
+        const person = {
+            name: "Zodiac Hasbro",
+            age: 56
+            };
+            
+            // Template literal with multi-line and string interpolation
+            const greeting = `Hello, my name is ${person.name}!
+            I am ${person.age} years old.`;
+            
+            console.log(greeting); // prints
+            // Hello, my name is Zodiac Hasbro!
+            // I am 56 years old.
+    </pre>
+</code>
+    
+<p>Muchas cosas sucedieron allí. En primer lugar, el ejemplo utiliza comillas 
+    invertidas (`), no comillas (' o "), para ajustar la cadena. En segundo lugar, 
+    observe que la cadena es de varias líneas, tanto en el código como en la salida. 
+    Esto ahorra la inserción de \ n dentro de las cadenas. La sintaxis $ {variable} 
+    utilizada anteriormente es un marcador de posición. Básicamente, ya no tendrá 
+    que usar la concatenación con el operador +. Para agregar variables a las 
+    cadenas, simplemente suelte la variable en una cadena de plantilla y envuélvala 
+    con $ {y }. De manera similar, puede incluir otras expresiones en su literal de 
+    cadena, por ejemplo $ {a + b}. Esta nueva forma de crear cadenas le brinda más 
+    flexibilidad para crear cadenas robustas.</p>

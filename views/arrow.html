@@ -1,0 +1,64 @@
+<h1>Funciones Arrow</h1>
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-arrow-functions-to-write-concise-anonymous-functions" target="_blank" rel="noopener noreferrer">Enlace</a>
+
+<h2>ES6: Uso de funciones Arrow para escribir funciones anonimas</h2>
+
+<p>Funcion anonima</p>
+
+<code>
+    <pre>
+        const myFunc = function() {
+            const myVar = "value";
+            return myVar;
+            }
+    </pre>
+
+</code>
+
+<p>Funcion Arrow</p>
+
+<code>
+    <pre>
+        const myFunc = () => {
+            const myVar = "value";
+            return myVar;
+            }         
+    </pre>
+</code>
+
+<p>Funcion Arrow - Si no hay body y solo <code>return</code>
+    , se puede omitar la palabra <code>return</code> y los parentesis</p>
+
+<code>
+    <pre>
+        const myFunc = () => "value";         
+    </pre>
+</code>
+
+<hr>
+
+<h2>ES6: Write Arrow Functions with Parameters</h2>
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/write-arrow-functions-with-parameters" target="_blank" rel="noopener noreferrer">Enlace</a>
+<p>Se pueden pasar parametros como a una funcion normal.</p>
+
+<code>
+    <pre>
+        const doubler = (item) => item * 2;        
+    </pre>
+</code>
+
+<p>Si solo hay un parametro se pueden omitir los parentesis.</p>
+
+<code>
+    <pre>
+        const doubler = item => item * 2;       
+    </pre>
+</code>
+
+<p>Se puede pasar mas de una parametro a la funcion arrow</p>
+
+<code>
+    <pre>
+        const multiplier = (item, multi) => item * multi;       
+    </pre>
+</code>

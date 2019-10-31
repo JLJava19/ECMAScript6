@@ -1,0 +1,67 @@
+<h1>ES6: Use the Spread Operator to Evaluate Arrays In-Place</h1>
+<br>
+<a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-the-spread-operator-to-evaluate-arrays-in-place" target="_blank" rel="noopener noreferrer">Enlace</a>
+<p>ES6 introduce un nuevo operador: <code>spread</code>, nos permite expandir Arrays
+y otras expresiones en lugares donde multiples parametros son esperados</p>
+
+<p>El codigo ES5 escrito abajo usa apply() para computar el valos maximo en un array:</p>
+
+<code>
+    <pre>
+        var arr = [6, 89, 3, 45];
+        var maximus = Math.max.apply(null, arr); // returns 89
+    </pre>
+</code>
+
+
+<p>
+    Teniamos que usar <code>Math.max.apply(null, arr)</code> porque <code>max(arr)</code> devuelve <code>NaN</code>.
+    <code>Math.max()</code> espera argumentos separatos por coma, pero <mark>NO UN ARRAY</mark>.
+    El operador <code>spread</code> hace la sintaxis mucho mejor de leer y mantener.
+</p>
+
+<code>
+    <pre>
+        const arr = [6, 89, 3, 45];
+        const maximus = Math.max(...arr); // returns 89
+    </pre>
+</code>
+
+<p>
+<mark>...arr</mark> devuelve un unpacked array. Extiende el array.
+    
+Sin embargo, el operador de propagación solo funciona en el lugar, como en un 
+argumento para una función o en una matriz literal.
+El siguiente codigo no funcionara
+</p>
+
+<code>
+    <pre>
+        const spreaded = ...arr; // will throw a syntax error
+    </pre>
+</code>
+
+
+<h4>Solucion</h4>
+
+<code>
+    <pre>
+        const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
+        let arr2;
+
+        (function() {
+            "use strict";
+            arr2 = [...arr1]; // change this line
+        })();
+
+        console.log(arr2);
+    </pre>
+</code>
+
+<p>Explicacion del código</p>
+<p>Unpacking the arr1 using the spread operator and then copying those 
+    values to arr2</p>
+
+<a href="https://www.freecodecamp.org/forum/t/freecodecamp-challenge-guide-use-the-spread-operator-to-evaluate-arrays-in-place/301222" target="_blank" rel="noopener noreferrer">Enlace</a>
+
+
